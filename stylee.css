@@ -1,0 +1,134 @@
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Abhaya Libre', serif; /* Use a fallback font */
+}
+
+/* Selection styles */
+*::selection {
+    color: white;
+    background-color: black;
+}
+
+/* Body and HTML styles */
+html, body {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    font-size: 16px; /* Base font size for better readability */
+}
+
+/* Main container */
+#main {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+    scroll-snap-align: start;
+}
+
+/* Navigation styles */
+nav {
+    padding: 1vh 1vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 9;
+    background-color: rgba(202, 215, 231, 0.9);
+    padding-top: 2.5vh;
+}
+
+/* Logo styles */
+.logo {
+    padding-left: 2vh;
+    height: auto;
+    max-height: 35px;
+    width: auto;
+}
+
+/* Responsive styles for nav-part2 */
+#nav-part2 {
+    padding: 8px 10px; /* Adjusted padding for smaller screens */
+    font-size: 14px; /* Adjusted font size for smaller screens */
+}
+
+/* Responsive styles for nav-part3 */
+#nav-part3 {
+    gap: 5px; /* Increased gap for smaller screens */
+}
+
+#nav-part3 h4 {
+    padding: 8px 10px; /* Adjusted padding for smaller screens */
+    font-size: 14px; /* Adjusted font size for smaller screens */
+}
+
+/* Center section */
+#center1,
+#center2 {
+    height: auto; /* Adjusted height for smaller screens */
+    padding-top: 8%; /* Adjusted padding for smaller screens */
+}
+
+/* Left and Right sections */
+#left1,
+#left2 {
+    width: 100%; /* Adjusted width for smaller screens */
+    margin: 0 auto; /* Center align on smaller screens */
+    text-align: center; /* Center align text on smaller screens */
+}
+
+#left1 h1,
+#left2 h1 {
+    font-size: 24px; /* Adjusted font size for smaller screens */
+}
+
+#left1 h3,
+#left2 h3 {
+    font-size: 16px; /* Adjusted font size for smaller screens */
+}
+
+#right1 img,
+#right2 img {
+    width: 100%; /* Adjusted image width for smaller screens */
+    max-width: 100%; /* Ensure images don't exceed container width */
+}
+
+/* Addition section */
+#RecentAddition1 {
+    margin: 1vh 0; /* Adjusted margin for smaller screens */
+}
+
+#description1 {
+    flex-wrap: wrap; /* Ensure items wrap on smaller screens */
+    padding: 1% 5%; /* Adjusted padding for smaller screens */
+}
+
+#addition1-l img {
+    height: auto; /* Adjusted image height for smaller screens */
+    max-height: 60vh; /* Maximum height for smaller screens */
+}
+
+#addition1-r {
+    margin-left: 10px; /* Adjusted margin for smaller screens */
+}
+
+#addition1-r h1 {
+    font-size: 16px; /* Adjusted font size for smaller screens */
+}
+
+#addition1-r h3 {
+    font-size: 16px; /* Adjusted font size for smaller screens */
+}
+
+/* Moving Text */
+#moving-text h1 {
+    font-size: 18px; /* Adjusted font size for smaller screens */
+}
+
+/* Footer styles */
+footer div {
+    padding: 1vh;
+}
