@@ -1,0 +1,590 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vegetarian Delights - Colorful Zaaika</title>
+    <link rel="stylesheet" href="zaaika.css">
+    <link rel="icon" href="/private/b_icon-512x512.png" type="image/x-icon"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div id="cursor"></div>
+    <div id="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="/private/index-cz-transparent.png" alt="Colorful Zaaika Logo" class="logo">
+                <!-- <span class="logo-text">Zaaika</span> -->
+            </a>
+            
+            <div class="nav-search">
+                <input type="text" placeholder="Search recipes..." class="search-input" id="searchInput">
+                <i class="fas fa-search search-icon"></i>
+                <div class="search-results" id="searchResults"></div>
+            </div>
+            
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="#recipes" class="nav-link">Recipes</a>
+                <a href="sweets.html" class="nav-link">Sweets</a>
+                <a href="nonveg.html" class="nav-link">Non-Veg</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <a href="index.html#collections">Collections</a>
+                <span>/</span>
+                <span>Vegetarian</span>
+            </div>
+            <h1 class="page-title">
+                <span class="gradient-text">Vegetarian</span>
+                <span>Delights</span>
+            </h1>
+            <p class="page-description">
+                "Get ready to taste the love in every bite – where every dish is a hug from our kitchen to your heart!"
+            </p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label">Recipes</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">4.8</span>
+                    <span class="stat-label">Rating</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label">Made This</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="/private/index-V-1c.jpg" alt="Vegetarian Food">
+        </div>
+    </section>
+
+    <!-- Recipe Slider Section -->
+    <section class="recipes-section" id="recipes">
+        <div class="container">
+            <h2 class="section-title">Featured <span class="gradient-text">Recipes</span></h2>
+            
+            <div class="recipe-slider">
+                <div class="slider-container">
+                    <div class="slide active" data-recipe="paneer-tikka">
+                        <div class="recipe-card" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('/private/veg-paneertikka.jpg');">
+                            <div class="recipe-content">
+                                <div class="recipe-badge">Popular</div>
+                                <h3 class="recipe-name">Paneer Tikka</h3>
+                                <p class="recipe-description">Grilled paneer marinated in aromatic spices and herbs</p>
+                                <div class="recipe-meta">
+                                    <span><i class="fas fa-clock"></i> 30 mins</span>
+                                    <span><i class="fas fa-users"></i> 4 servings</span>
+                                    <span><i class="fas fa-fire"></i> Medium</span>
+                                </div>
+                                <div class="recipe-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>4.9</span>
+                                </div>
+                                <button class="recipe-btn" onclick="scrollToRecipe('paneer-tikka')">View Recipe</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="slide" data-recipe="besan-sabji">
+                        <div class="recipe-card" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('/private/veg-besansabji.jpg');">
+                            <div class="recipe-content">
+                                <div class="recipe-badge">Traditional</div>
+                                <h3 class="recipe-name">Besan Ki Sabji</h3>
+                                <p class="recipe-description">Gram flour curry with traditional Indian spices</p>
+                                <div class="recipe-meta">
+                                    <span><i class="fas fa-clock"></i> 25 mins</span>
+                                    <span><i class="fas fa-users"></i> 4 servings</span>
+                                    <span><i class="fas fa-fire"></i> Easy</span>
+                                </div>
+                                <div class="recipe-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span>4.6</span>
+                                </div>
+                                <button class="recipe-btn" onclick="scrollToRecipe('besan-sabji')">View Recipe</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="slide" data-recipe="tehri">
+                        <div class="recipe-card" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('/private/veg-tehri.jpg');">
+                            <div class="recipe-content">
+                                <div class="recipe-badge">Special</div>
+                                <h3 class="recipe-name">Tehri</h3>
+                                <p class="recipe-description">Traditional vegetable biryani from Uttar Pradesh</p>
+                                <div class="recipe-meta">
+                                    <span><i class="fas fa-clock"></i> 45 mins</span>
+                                    <span><i class="fas fa-users"></i> 6 servings</span>
+                                    <span><i class="fas fa-fire"></i> Medium</span>
+                                </div>
+                                <div class="recipe-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>4.8</span>
+                                </div>
+                                <button class="recipe-btn" onclick="scrollToRecipe('tehri')">View Recipe</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="slide" data-recipe="dal-pitthi">
+                        <div class="recipe-card" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('/private/veg-dal-pitthi.jpg');">
+                            <div class="recipe-content">
+                                <div class="recipe-badge">Comfort Food</div>
+                                <h3 class="recipe-name">Dal Pitthi</h3>
+                                <p class="recipe-description">Lentil dumplings in spiced gravy</p>
+                                <div class="recipe-meta">
+                                    <span><i class="fas fa-clock"></i> 50 mins</span>
+                                    <span><i class="fas fa-users"></i> 5 servings</span>
+                                    <span><i class="fas fa-fire"></i> Medium</span>
+                                </div>
+                                <div class="recipe-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span>4.7</span>
+                                </div>
+                                <button class="recipe-btn" onclick="scrollToRecipe('dal-pitthi')">View Recipe</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="slide" data-recipe="litti-chokha">
+                        <div class="recipe-card" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('/private/veg-litti-chokha.jpg');">
+                            <div class="recipe-content">
+                                <div class="recipe-badge">Authentic</div>
+                                <h3 class="recipe-name">Litti Chokha</h3>
+                                <p class="recipe-description">Traditional Bihari delicacy with rustic flavors</p>
+                                <div class="recipe-meta">
+                                    <span><i class="fas fa-clock"></i> 60 mins</span>
+                                    <span><i class="fas fa-users"></i> 4 servings</span>
+                                    <span><i class="fas fa-fire"></i> Hard</span>
+                                </div>
+                                <div class="recipe-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>4.9</span>
+                                </div>
+                                <button class="recipe-btn" onclick="scrollToRecipe('litti-chokha')">View Recipe</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slider-controls">
+                    <button class="slider-btn prev-btn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="slider-btn next-btn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                
+                <div class="slider-indicators">
+                    <span class="indicator active" data-slide="0"></span>
+                    <span class="indicator" data-slide="1"></span>
+                    <span class="indicator" data-slide="2"></span>
+                    <span class="indicator" data-slide="3"></span>
+                    <span class="indicator" data-slide="4"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recipe Details Section -->
+    <section class="recipe-details">
+        <div class="container">
+            <div class="recipe-detail-card" id="besan-sabji">
+                <div class="recipe-detail-content">
+                    <div class="recipe-image">
+                        <img src="/private/veg-besansabji.jpg" alt="Besan Ki Sabji">
+                        <div class="image-info">
+                            <div class="nutrition-badge">
+                                <i class="fas fa-leaf"></i>
+                                <span>Vegetarian</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recipe-text">
+                        <div class="recipe-header">
+                            <h2 class="recipe-title">Besan Ki Sabji</h2>
+                            <div class="recipe-actions">
+                                <button class="action-btn"><i class="fas fa-bookmark"></i> Save</button>
+                                <button class="action-btn"><i class="fas fa-share"></i> Share</button>
+                                <button class="action-btn"><i class="fas fa-print"></i> Print</button>
+                            </div>
+                        </div>
+                        
+                        <div class="recipe-overview">
+                            <div class="overview-item">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <span class="label">Prep Time</span>
+                                    <span class="value">15 mins</span>
+                                </div>
+                            </div>
+                            <div class="overview-item">
+                                <i class="fas fa-fire"></i>
+                                <div>
+                                    <span class="label">Cook Time</span>
+                                    <span class="value">25 mins</span>
+                                </div>
+                            </div>
+                            <div class="overview-item">
+                                <i class="fas fa-users"></i>
+                                <div>
+                                    <span class="label">Servings</span>
+                                    <span class="value">4 people</span>
+                                </div>
+                            </div>
+                            <div class="overview-item">
+                                <i class="fas fa-signal"></i>
+                                <div>
+                                    <span class="label">Difficulty</span>
+                                    <span class="value">Easy</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <p class="recipe-intro">
+                            Besan ki Sabzi is a delicious and wholesome Indian dish made with gram flour, tempered with aromatic spices, and cooked to a creamy, velvety consistency. Its earthy flavors and rustic appeal make it a comforting choice, pairing beautifully with roti or rice for a satisfying homemade meal.
+                        </p>
+                        
+                        <div class="ingredients-section">
+                            <h3>Ingredients</h3>
+                            
+                            <div class="ingredient-group">
+                                <h4>For Besan Ki Wadi</h4>
+                                <ul class="ingredients-list">
+                                    <li><input type="checkbox"> ½ cup Curd, beaten</li>
+                                    <li><input type="checkbox"> ½ tsp Turmeric powder</li>
+                                    <li><input type="checkbox"> ½ tsp Degi red chilli powder</li>
+                                    <li><input type="checkbox"> A pinch of asafoetida</li>
+                                    <li><input type="checkbox"> 1 cup Gram flour</li>
+                                    <li><input type="checkbox"> Salt to taste</li>
+                                    <li><input type="checkbox"> 1 tsp Oil</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="ingredient-group">
+                                <h4>For Curd Mixture</h4>
+                                <ul class="ingredients-list">
+                                    <li><input type="checkbox"> 2 cups Curd, beaten</li>
+                                    <li><input type="checkbox"> 1 tsp Ghee</li>
+                                    <li><input type="checkbox"> Salt to taste</li>
+                                    <li><input type="checkbox"> 2 Green chilli, chopped</li>
+                                    <li><input type="checkbox"> 1 inch Ginger, chopped</li>
+                                    <li><input type="checkbox"> 1 tsp Turmeric powder</li>
+                                    <li><input type="checkbox"> ½ tsp Degi red chilli powder</li>
+                                    <li><input type="checkbox"> A pinch of asafoetida</li>
+                                    <li><input type="checkbox"> 1 ½ tbsp Coriander powder</li>
+                                    <li><input type="checkbox"> 1 tsp Gram flour</li>
+                                </ul>
+                            </div>
+
+                            <div class="ingredient-group">
+                                <h4>For Gravy</h4>
+                                <ul class="ingredients-list">
+                                    <li><input type="checkbox"> 2 tsp Ghee</li>
+                                    <li><input type="checkbox"> ¼ tsp Fenugreek seeds</li>
+                                    <li><input type="checkbox"> ½ tsp Cumin seeds</li>
+                                    <li><input type="checkbox"> ½ tsp Fennel seeds</li>
+                                    <li><input type="checkbox"> 2-3 Dry red chillies</li>
+                                    <li><input type="checkbox"> A pinch of asafoetida</li>
+                                    <li><input type="checkbox"> 1 cup Water</li>
+                                </ul>
+                            </div>
+
+                            <div class="ingredient-group">
+                                <h4>For Tadka</h4>
+                                <ul class="ingredients-list">
+                                    <li><input type="checkbox"> 1 tsp Oil</li>
+                                    <li><input type="checkbox"> ¼ tsp Carom seeds</li>
+                                    <li><input type="checkbox"> ¼ tsp Onion seeds</li>
+                                    <li><input type="checkbox"> ¼ tsp White sesame seeds</li>
+                                    <li><input type="checkbox"> A pinch of degi red chilli powder</li>
+                                </ul>
+                            </div>
+
+                            <div class="ingredient-group">
+                                <h4>For Garnish</h4>
+                                <ul class="ingredients-list">
+                                    <li><input type="checkbox"> Fresh Mint leaves</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="instructions-section">
+                            <h3>Instructions</h3>
+                            <ol class="instructions-list">
+                                <li>Mix all ingredients for besan wadi and make a thick batter. Steam for 15 minutes until set.</li>
+                                <li>Cut the steamed wadi into cubes and set aside.</li>
+                                <li>Prepare the curd mixture by combining all ingredients and whisking until smooth.</li>
+                                <li>Heat ghee in a pan, add fenugreek, cumin, and fennel seeds.</li>
+                                <li>Add dry red chillies and asafoetida, then pour the curd mixture.</li>
+                                <li>Cook until it comes to a boil, then add the besan wadi cubes.</li>
+                                <li>Simmer for 10-12 minutes until the gravy thickens.</li>
+                                <li>Prepare tadka by heating oil and adding all tadka ingredients.</li>
+                                <li>Pour the tadka over the sabji and garnish with mint leaves.</li>
+                                <li>Serve hot with roti or rice.</li>
+                            </ol>
+                        </div>
+
+                        <div class="recipe-tips">
+                            <h3>Chef's Tips</h3>
+                            <ul class="tips-list">
+                                <li>Ensure the besan wadi is properly steamed to avoid raw taste</li>
+                                <li>Whisk the curd mixture well to prevent curdling</li>
+                                <li>Adjust spices according to your taste preference</li>
+                                <li>Fresh mint leaves enhance the overall flavor</li>
+                            </ul>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+            
+            <div class="recipe-detail-card" id="tehri">
+                <div class="recipe-detail-content">
+                    <div class="recipe-image">
+                        <img src="/private/veg-tehri.jpg" alt="Tehri">
+                        <div class="image-info">
+                            <div class="nutrition-badge">
+                                <i class="fas fa-rice"></i>
+                                <span>One Pot Meal</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recipe-text">
+                        <div class="recipe-header">
+                            <h2 class="recipe-title">Tehri</h2>
+                            <div class="recipe-actions">
+                                <button class="action-btn"><i class="fas fa-bookmark"></i> Save</button>
+                                <button class="action-btn"><i class="fas fa-share"></i> Share</button>
+                                <button class="action-btn"><i class="fas fa-print"></i> Print</button>
+                            </div>
+                        </div>
+                        
+                        <div class="recipe-overview">
+                            <div class="overview-item">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <span class="label">Prep Time</span>
+                                    <span class="value">20 mins</span>
+                                </div>
+                            </div>
+                            <div class="overview-item">
+                                <i class="fas fa-fire"></i>
+                                <div>
+                                    <span class="label">Cook Time</span>
+                                    <span class="value">45 mins</span>
+                                </div>
+                            </div>
+                            <div class="overview-item">
+                                <i class="fas fa-users"></i>
+                                <div>
+                                    <span class="label">Servings</span>
+                                    <span class="value">6 people</span>
+                                </div>
+                            </div>
+                            <div class="overview-item">
+                                <i class="fas fa-signal"></i>
+                                <div>
+                                    <span class="label">Difficulty</span>
+                                    <span class="value">Medium</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <p class="recipe-intro">
+                            Tehri is a flavorful vegetarian biryani from Uttar Pradesh, made with basmati rice, mixed vegetables, and aromatic spices. This one-pot wonder combines the richness of traditional biryani with the wholesomeness of fresh vegetables, creating a perfect meal for any occasion.
+                        </p>
+                        
+                        <div class="ingredients-section">
+                            <h3>Ingredients</h3>
+                            
+                            <div class="ingredient-group">
+                                <h4>For Rice</h4>
+                                <ul class="ingredients-list">
+                                    <li><input type="checkbox"> 2 cups Basmati rice</li>
+                                    <li><input type="checkbox"> 4-5 Green cardamom</li>
+                                    <li><input type="checkbox"> 2 Bay leaves</li>
+                                    <li><input type="checkbox"> 1 inch Cinnamon stick</li>
+                                    <li><input type="checkbox"> Salt to taste</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="ingredient-group">
+                                <h4>For Vegetables & Spices</h4>
+                                <ul class="ingredients-list">
+                                    <li><input type="checkbox"> 1 cup Mixed vegetables (potato, peas, cauliflower)</li>
+                                    <li><input type="checkbox"> 2 Large onions, sliced</li>
+                                    <li><input type="checkbox"> 3 tbsp Ghee</li>
+                                    <li><input type="checkbox"> 1 tsp Ginger-garlic paste</li>
+                                    <li><input type="checkbox"> 1 tsp Red chilli powder</li>
+                                    <li><input type="checkbox"> ½ tsp Turmeric powder</li>
+                                    <li><input type="checkbox"> 1 tsp Garam masala</li>
+                                    <li><input type="checkbox"> Fresh mint leaves</li>
+                                    <li><input type="checkbox"> Fresh coriander leaves</li>
+                                    <li><input type="checkbox"> 2 cups Vegetable stock or water</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="instructions-section">
+                            <h3>Instructions</h3>
+                            <ol class="instructions-list">
+                                <li>Wash and soak basmati rice for 30 minutes, then drain.</li>
+                                <li>Heat ghee in a heavy-bottomed pot and fry sliced onions until golden brown.</li>
+                                <li>Remove half the onions and set aside for garnish.</li>
+                                <li>Add ginger-garlic paste to remaining onions and sauté for 2 minutes.</li>
+                                <li>Add mixed vegetables and cook for 5-7 minutes until slightly tender.</li>
+                                <li>Add all spices and mix well. Cook for 2 minutes.</li>
+                                <li>Add the soaked rice and gently mix with vegetables.</li>
+                                <li>Add hot vegetable stock, whole spices, and salt.</li>
+                                <li>Bring to a boil, then reduce heat and cover. Cook for 20-25 minutes.</li>
+                                <li>Let it rest for 10 minutes before opening the lid.</li>
+                                <li>Garnish with fried onions, mint, and coriander leaves.</li>
+                                <li>Serve hot with raita and pickle.</li>
+                            </ol>
+                        </div>
+
+                        <div class="recipe-tips">
+                            <h3>Chef's Tips</h3>
+                            <ul class="tips-list">
+                                <li>Use aged basmati rice for better texture and aroma</li>
+                                <li>Don't over-mix the rice to prevent breaking</li>
+                                <li>Cook on low heat to ensure even cooking</li>
+                                <li>Let it rest after cooking for perfect texture</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Recipes -->
+    <section class="related-recipes">
+        <div class="container">
+            <h2 class="section-title">More <span class="gradient-text">Vegetarian</span> Recipes</h2>
+            <div class="related-grid">
+                <a href="#paneer-tikka" class="related-card">
+                    <img src="/private/veg-paneertikka.jpg" alt="Paneer Tikka">
+                    <div class="related-content">
+                        <h4>Paneer Tikka</h4>
+                        <p>30 mins • 4 servings</p>
+                    </div>
+                </a>
+                <a href="#dal-pitthi" class="related-card">
+                    <img src="/private/veg-dal-pitthi.jpg" alt="Dal Pitthi">
+                    <div class="related-content">
+                        <h4>Dal Pitthi</h4>
+                        <p>50 mins • 5 servings</p>
+                    </div>
+                </a>
+                <a href="#litti-chokha" class="related-card">
+                    <img src="/private/veg-litti-chokha.jpg" alt="Litti Chokha">
+                    <div class="related-content">
+                        <h4>Litti Chokha</h4>
+                        <p>60 mins • 4 servings</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Colorful Zaaika</h4>
+                    <p>Discover the art of vegetarian cooking with our authentic recipes and modern techniques.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="sweets.html">Sweets</a></li>
+                        <li><a href="nonveg.html">Non-Veg</a></li>
+                        <li><a href="watercolor.html">Art Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h5>Categories</h5>
+                    <ul>
+                        <li><a href="#appetizers">Appetizers</a></li>
+                        <li><a href="#main-course">Main Course</a></li>
+                        <li><a href="#snacks">Snacks</a></li>
+                        <li><a href="#beverages">Beverages</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h5>Contact Info</h5>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> colorfulzaaika@gmail.com</p>
+                        <p><i class="fas fa-phone"></i> +91 8840 248XXX</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-credits">
+                    <p>Owned by <span class="gradient-text">Rani Amritanshu</span></p>
+                    <p>Managed by <span class="gradient-text">Jai Kartikey</span></p>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; 2024 Colorful Zaaika. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="zaaika.js"></script>
+</body>
+</html>

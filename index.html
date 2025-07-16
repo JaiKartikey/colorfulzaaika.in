@@ -1,0 +1,398 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorful Zaaika - Modern Culinary & Art Experience</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/private/b_icon-512x512.png" type="image/x-icon"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div id="cursor"></div>
+    <div id="cursor-follower"></div>
+    
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <img src="/private/index-cz-transparent.png" alt="Logo" class="loading-logo">
+            <!-- <div class="loading-text">Colorful Zaaika</div> -->
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="/private/index-cz-transparent.png" alt="Colorful Zaaika Logo" class="logo">
+                <!-- <span class="logo-text"></span> -->
+            </a>
+            
+            <div class="nav-search">
+                <input type="text" placeholder="Search recipes & art..." class="search-input" id="searchInput">
+                <i class="fas fa-search search-icon"></i>
+                <div class="search-results" id="searchResults"></div>
+            </div>
+            
+            <div class="nav-links">
+                <!-- <a href="#collections" class="nav-link">Collections</a> -->
+                <a href="#newsletter" class="nav-link">Newsletter</a>
+                <!-- <a href="#footer" class="nav-link">About</a> -->
+                <a href="#footer" class="nav-link">Contact</a>
+                <!-- <a href="#auth" class="nav-link auth-btn">Sign In</a> -->
+            </div>
+            
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-bg"></div>
+        <div class="hero-particles"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="title-line">Culinary</span>
+                    <span class="title-line gradient-text">Excellence</span>
+                    <span class="title-line">& Artistry</span>
+                </h1>
+                <p class="hero-description">
+                    Discover a world where flavors meet artistry. Explore our curated collection of recipes and paintings that inspire creativity.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#collections" class="btn btn-primary">
+                        <span>Explore Collections</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#featured" class="btn btn-secondary">
+                        <span>View Gallery</span>
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Recipes</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">30+</span>
+                        <span class="stat-label">Artworks</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">1000+</span>
+                        <span class="stat-label">Happy Users</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-image-container">
+                    <img src="/private/index-cb-crop.jpg" alt="Culinary Art" class="hero-image">
+                    <div class="image-overlay"></div>
+                    <div class="floating-elements">
+                        <div class="floating-icon"><i class="fas fa-utensils"></i></div>
+                        <div class="floating-icon"><i class="fas fa-palette"></i></div>
+                        <div class="floating-icon"><i class="fas fa-heart"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="scroll-text">Discover More</div>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Collections Section -->
+    <section id="collections" class="collections-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our <span class="gradient-text">Collections</span></h2>
+                <p class="section-subtitle">Carefully curated categories of culinary delights and artistic expressions</p>
+            </div>
+            
+            <div class="collections-grid">
+                <!-- Zaaika Collections -->
+                <div class="collection-category">
+                    <h3 class="category-title">Zaaika - Culinary Journey</h3>
+                    <div class="collection-cards">
+                        <a href="veg.html" class="collection-card" data-category="vegetarian">
+                            <div class="card-image">
+                                <img src="/private/index-V-1c.jpg" alt="Vegetarian Delights">
+                                <div class="card-overlay"></div>
+                            </div>
+                            <div class="card-content">
+                                <div class="card-icon">
+                                    <i class="fas fa-leaf"></i>
+                                </div>
+                                <h4>Vegetarian</h4>
+                                <p>Fresh, vibrant, and full of flavor</p>
+                                <div class="card-stats">
+                                    <span><i class="fas fa-book"></i> 15 Recipes</span>
+                                    <span><i class="fas fa-clock"></i> 20-60 min</span>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="sweets.html" class="collection-card" data-category="sweets">
+                            <div class="card-image">
+                                <img src="/private/index-S-1c.jpg" alt="Sweet Delicacies">
+                                <div class="card-overlay"></div>
+                            </div>
+                            <div class="card-content">
+                                <div class="card-icon">
+                                    <i class="fas fa-candy-cane"></i>
+                                </div>
+                                <h4>Sweets</h4>
+                                <p>Traditional treats for celebrations</p>
+                                <div class="card-stats">
+                                    <span><i class="fas fa-book"></i> 12 Recipes</span>
+                                    <span><i class="fas fa-clock"></i> 30-90 min</span>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="nonveg.html" class="collection-card" data-category="nonveg">
+                            <div class="card-image">
+                                <img src="/private/index-NV-1c.jpg" alt="Non-Vegetarian Specialties">
+                                <div class="card-overlay"></div>
+                            </div>
+                            <div class="card-content">
+                                <div class="card-icon">
+                                    <i class="fas fa-drumstick-bite"></i>
+                                </div>
+                                <h4>Non-Vegetarian</h4>
+                                <p>Rich, hearty, and satisfying</p>
+                                <div class="card-stats">
+                                    <span><i class="fas fa-book"></i> 18 Recipes</span>
+                                    <span><i class="fas fa-clock"></i> 45-120 min</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- ChitraKala Collections -->
+                <div class="collection-category">
+                    <h3 class="category-title">ChitraKala - Artistic Expression</h3>
+                    <div class="collection-cards">
+                        <a href="watercolor.html" class="collection-card" data-category="watercolor">
+                            <div class="card-image">
+                                <img src="/private/index-watercolor-1c.jpeg" alt="Watercolor Paintings">
+                                <div class="card-overlay"></div>
+                            </div>
+                            <div class="card-content">
+                                <div class="card-icon">
+                                    <i class="fas fa-palette"></i>
+                                </div>
+                                <h4>Watercolor</h4>
+                                <p>Fluid beauty in every brushstroke</p>
+                                <div class="card-stats">
+                                    <span><i class="fas fa-image"></i> 20 Artworks</span>
+                                    <span><i class="fas fa-star"></i> Premium</span>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="pencil.html" class="collection-card" data-category="pencil">
+                            <div class="card-image">
+                                <img src="/private/index-pencil-1c.jpg" alt="Pencil Sketches">
+                                <div class="card-overlay"></div>
+                            </div>
+                            <div class="card-content">
+                                <div class="card-icon">
+                                    <i class="fas fa-pencil-alt"></i>
+                                </div>
+                                <h4>Pencil Art</h4>
+                                <p>Classic elegance in monochrome</p>
+                                <div class="card-stats">
+                                    <span><i class="fas fa-image"></i> 15 Artworks</span>
+                                    <span><i class="fas fa-award"></i> Classic</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Section -->
+    <section id="featured" class="featured-section">
+        <div class="container">
+            <div class="featured-content reverse">
+                <div class="featured-text">
+                    <div class="featured-badge">Recently Added</div>
+                    <h2 class="featured-title">Gur ka <span class="gradient-text">Thekua</span></h2>
+                    <p class="featured-description">
+                        A traditional Indian sweet, made with jaggery and wheat flour, deep-fried to crispy perfection. This authentic delicacy brings the taste of home with every bite.
+                    </p>
+                    <div class="featured-details">
+                        <div class="detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span>45 mins</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-users"></i>
+                            <span>Serves 6</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-star"></i>
+                            <span>Traditional</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-fire"></i>
+                            <span>Medium</span>
+                        </div>
+                    </div>
+                    <div class="featured-buttons">
+                        <a href="sweets.html" class="btn btn-primary">
+                            <span>View Recipe</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <button class="btn btn-outline">
+                            <i class="fas fa-bookmark"></i>
+                            <span>Save</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="featured-image">
+                    <img src="/private/index-Thekuaa-crop.jpg" alt="Gur ka Thekua">
+                    <div class="image-decoration"></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Art Feature Section -->
+    <section id="art-featured" class="art-featured-section">
+        <div class="container">
+            <div class="featured-content reverse">
+
+                <div class="featured-image">
+                    <img src="/private/index-paint3.jpg" alt="Landscape Painting">
+                    <div class="image-decoration"></div>
+                </div>
+
+                <div class="featured-text">
+                    <div class="featured-badge">Latest Artwork</div>
+                    <h2 class="featured-title">Landscape <span class="gradient-text">Painting</span></h2>
+                    <p class="featured-description">
+                        Capturing nature's beauty on canvas, showcasing scenery, seasons, and emotions through artistry. This piece demonstrates the delicate balance between light and shadow.
+                    </p>
+                    <div class="featured-details">
+                        <div class="detail-item">
+                            <i class="fas fa-palette"></i>
+                            <span>Watercolor</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-expand-arrows-alt"></i>
+                            <span>24" x 18"</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-calendar"></i>
+                            <span>2024</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-eye"></i>
+                            <span>1.2k views</span>
+                        </div>
+                    </div>
+                    <div class="featured-buttons">
+                        <a href="watercolor.html" class="btn btn-primary">
+                            <span>View Gallery</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <button class="btn btn-outline">
+                            <i class="fas fa-share"></i>
+                            <span>Share</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section id="newsletter" class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Stay Updated</h2>
+                <p>Get the latest recipes and artworks delivered to your inbox</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" class="newsletter-input">
+                    <button class="btn btn-primary newsletter-btn">Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <!-- <h4>Colorful Zaaika</h4> -->
+                    <img src="private/index-cz-transparent.png" alt="">
+                    <p>Where culinary art meets visual artistry. Explore, create, and be inspired.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h5>Collections</h5>
+                    <ul>
+                        <li><a href="veg.html">Vegetarian</a></li>
+                        <li><a href="sweets.html">Sweets</a></li>
+                        <li><a href="nonveg.html">Non-Vegetarian</a></li>
+                        <li><a href="watercolor.html">Watercolor</a></li>
+                        <li><a href="pencil.html">Pencil Art</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#newsletter">Newsletter</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h5>Contact Info</h5>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> colorfulzaaika@gmail.com</p>
+                        <p><i class="fas fa-phone"></i> +91 8840 248XXX</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Varanasi, UP, India</p> 
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-credits">
+                    <p>Owned by <span class="gradient-text">Rani Amritanshu</span></p>
+                    <p>Managed by <span class="gradient-text">Jai Kartikey</span></p>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; 2024 Colorful Zaaika. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="sessionStorage.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

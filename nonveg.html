@@ -1,0 +1,392 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Non-Vegetarian Specialties - Colorful Zaaika</title>
+    <link rel="stylesheet" href="zaaika.css">
+    <link rel="icon" href="/private/b_icon-512x512.png" type="image/x-icon"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div id="cursor"></div>
+    <div id="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="/private/index-cz-transparent.png" alt="Colorful Zaaika Logo" class="logo">
+                <!-- <span class="logo-text">Zaaika</span> -->
+            </a>
+            
+            <div class="nav-search">
+                <input type="text" placeholder="Search recipes..." class="search-input" id="searchInput">
+                <i class="fas fa-search search-icon"></i>
+                <div class="search-results" id="searchResults"></div>
+            </div>
+            
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="veg.html" class="nav-link">Vegetarian</a>
+                <a href="sweets.html" class="nav-link">Sweets</a>
+                <a href="#recipes" class="nav-link">Recipes</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <a href="index.html#collections">Collections</a>
+                <span>/</span>
+                <span>Non-Vegetarian</span>
+            </div>
+            <h1 class="page-title">
+                <span class="gradient-text">Non-Vegetarian</span>
+                <span>Specialties</span>
+            </h1>
+            <p class="page-description">
+                "Rich, hearty, and satisfying dishes that celebrate the art of meat cooking with traditional spices and techniques!"
+            </p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">18+</span>
+                    <span class="stat-label">Recipes</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">4.7</span>
+                    <span class="stat-label">Rating</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">1200+</span>
+                    <span class="stat-label">Made This</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="/private/index-NV-1c.jpg" alt="Non-Vegetarian Specialties">
+        </div>
+    </section>
+
+    <!-- Recipe Slider Section -->
+    <section class="recipes-section" id="recipes">
+        <div class="container">
+            <h2 class="section-title">Featured <span class="gradient-text">Dishes</span></h2>
+            
+            <div class="recipe-slider">
+                <div class="slider-container">
+                    <div class="slide active" data-recipe="chicken-curry">
+                        <div class="recipe-card" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('/private/nonveg-butter-chicken.jpg');">
+                            <div class="recipe-content">
+                                <div class="recipe-badge">Popular</div>
+                                <h3 class="recipe-name">Chicken Curry</h3>
+                                <p class="recipe-description">Rich and flavorful chicken curry with aromatic spices</p>
+                                <div class="recipe-meta">
+                                    <span><i class="fas fa-clock"></i> 45 mins</span>
+                                    <span><i class="fas fa-users"></i> 4 servings</span>
+                                    <span><i class="fas fa-fire"></i> Medium</span>
+                                </div>
+                                <div class="recipe-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>4.8</span>
+                                </div>
+                                <button class="recipe-btn" onclick="scrollToRecipe('chicken-curry')">View Recipe</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="slide" data-recipe="mutton-biryani">
+                        <div class="recipe-card" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('/private/nonveg-rogan-josh.png');">
+                            <div class="recipe-content">
+                                <div class="recipe-badge">Special</div>
+                                <h3 class="recipe-name">Mutton Biryani</h3>
+                                <p class="recipe-description">Aromatic basmati rice layered with tender mutton</p>
+                                <div class="recipe-meta">
+                                    <span><i class="fas fa-clock"></i> 90 mins</span>
+                                    <span><i class="fas fa-users"></i> 6 servings</span>
+                                    <span><i class="fas fa-fire"></i> Hard</span>
+                                </div>
+                                <div class="recipe-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span>4.6</span>
+                                </div>
+                                <button class="recipe-btn" onclick="scrollToRecipe('mutton-biryani')">View Recipe</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="slide" data-recipe="fish-curry">
+                        <div class="recipe-card" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('/private/nonveg-fish-fry.jpg');">
+                            <div class="recipe-content">
+                                <div class="recipe-badge">Coastal</div>
+                                <h3 class="recipe-name">Fish Curry</h3>
+                                <p class="recipe-description">Traditional coastal fish curry with coconut base</p>
+                                <div class="recipe-meta">
+                                    <span><i class="fas fa-clock"></i> 35 mins</span>
+                                    <span><i class="fas fa-users"></i> 4 servings</span>
+                                    <span><i class="fas fa-fire"></i> Medium</span>
+                                </div>
+                                <div class="recipe-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>4.7</span>
+                                </div>
+                                <button class="recipe-btn" onclick="scrollToRecipe('fish-curry')">View Recipe</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slider-controls">
+                    <button class="slider-btn prev-btn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="slider-btn next-btn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                
+                <div class="slider-indicators">
+                    <span class="indicator active" data-slide="0"></span>
+                    <span class="indicator" data-slide="1"></span>
+                    <span class="indicator" data-slide="2"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recipe Details Section -->
+    <section class="recipe-details">
+        <div class="container">
+            <div class="recipe-detail-card" id="chicken-curry">
+                <div class="recipe-detail-content">
+                    <div class="recipe-image">
+                        <img src="/private/nonveg-butter-chicken.jpg" alt="Chicken Curry">
+                        <div class="image-info">
+                            <div class="nutrition-badge">
+                                <i class="fas fa-drumstick-bite"></i>
+                                <span>High Protein</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recipe-text">
+                        <div class="recipe-header">
+                            <h2 class="recipe-title">Chicken Curry</h2>
+                            <div class="recipe-actions">
+                                <button class="action-btn"><i class="fas fa-bookmark"></i> Save</button>
+                                <button class="action-btn"><i class="fas fa-share"></i> Share</button>
+                                <button class="action-btn"><i class="fas fa-print"></i> Print</button>
+                            </div>
+                        </div>
+                        
+                        <div class="recipe-overview">
+                            <div class="overview-item">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <span class="label">Prep Time</span>
+                                    <span class="value">20 mins</span>
+                                </div>
+                            </div>
+                            <div class="overview-item">
+                                <i class="fas fa-fire"></i>
+                                <div>
+                                    <span class="label">Cook Time</span>
+                                    <span class="value">45 mins</span>
+                                </div>
+                            </div>
+                            <div class="overview-item">
+                                <i class="fas fa-users"></i>
+                                <div>
+                                    <span class="label">Servings</span>
+                                    <span class="value">4 people</span>
+                                </div>
+                            </div>
+                            <div class="overview-item">
+                                <i class="fas fa-signal"></i>
+                                <div>
+                                    <span class="label">Difficulty</span>
+                                    <span class="value">Medium</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <p class="recipe-intro">
+                            This authentic chicken curry is a perfect blend of aromatic spices and tender chicken pieces cooked to perfection. The rich, flavorful gravy pairs beautifully with rice or Indian bread, making it a comforting meal that brings the family together.
+                        </p>
+                        
+                        <div class="ingredients-section">
+                            <h3>Ingredients</h3>
+                            
+                            <div class="ingredient-group">
+                                <h4>For Chicken Marinade</h4>
+                                <ul class="ingredients-list">
+                                    <li><input type="checkbox"> 1 kg Chicken, cut into pieces</li>
+                                    <li><input type="checkbox"> 1 tsp Red chili powder</li>
+                                    <li><input type="checkbox"> 1/2 tsp Turmeric powder</li>
+                                    <li><input type="checkbox"> 1 tsp Ginger-garlic paste</li>
+                                    <li><input type="checkbox"> Salt to taste</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="ingredient-group">
+                                <h4>For Curry Base</h4>
+                                <ul class="ingredients-list">
+                                    <li><input type="checkbox"> 3 tbsp Cooking oil</li>
+                                    <li><input type="checkbox"> 2 Bay leaves</li>
+                                    <li><input type="checkbox"> 4-5 Green cardamom</li>
+                                    <li><input type="checkbox"> 1 inch Cinnamon stick</li>
+                                    <li><input type="checkbox"> 2 Large onions, finely chopped</li>
+                                    <li><input type="checkbox"> 2 Tomatoes, chopped</li>
+                                    <li><input type="checkbox"> 2 tbsp Ginger-garlic paste</li>
+                                    <li><input type="checkbox"> 2 tsp Coriander powder</li>
+                                    <li><input type="checkbox"> 1 tsp Cumin powder</li>
+                                    <li><input type="checkbox"> 1 tsp Garam masala</li>
+                                    <li><input type="checkbox"> 1/2 cup Water or chicken stock</li>
+                                    <li><input type="checkbox"> Fresh coriander leaves for garnish</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="instructions-section">
+                            <h3>Instructions</h3>
+                            <ol class="instructions-list">
+                                <li>Marinate chicken pieces with red chili powder, turmeric, ginger-garlic paste, and salt. Let it rest for 30 minutes.</li>
+                                <li>Heat oil in a heavy-bottomed pan. Add bay leaves, cardamom, and cinnamon.</li>
+                                <li>Add marinated chicken and cook until 70% done. Remove and set aside.</li>
+                                <li>In the same pan, add chopped onions and sauté until golden brown.</li>
+                                <li>Add ginger-garlic paste and cook for 2 minutes until fragrant.</li>
+                                <li>Add chopped tomatoes and cook until they break down completely.</li>
+                                <li>Add all the ground spices and cook for 2-3 minutes.</li>
+                                <li>Return the chicken to the pan and mix well with the masala.</li>
+                                <li>Add water or stock, bring to a boil, then simmer covered for 15-20 minutes.</li>
+                                <li>Check seasoning and adjust salt and spices as needed.</li>
+                                <li>Garnish with fresh coriander leaves and serve hot.</li>
+                            </ol>
+                        </div>
+
+                        <div class="recipe-tips">
+                            <h3>Chef's Tips</h3>
+                            <ul class="tips-list">
+                                <li>Marinating chicken for longer enhances the flavor</li>
+                                <li>Cook onions until properly golden for rich taste</li>
+                                <li>Adjust spice levels according to preference</li>
+                                <li>Let the curry rest for 5 minutes before serving</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Recipes -->
+    <section class="related-recipes">
+        <div class="container">
+            <h2 class="section-title">More <span class="gradient-text">Non-Veg</span> Recipes</h2>
+            <div class="related-grid">
+                <a href="#mutton-biryani" class="related-card">
+                    <img src="/private/nonveg-rogan-josh.png" alt="Mutton Biryani">
+                    <div class="related-content">
+                        <h4>Mutton Biryani</h4>
+                        <p>90 mins • 6 servings</p>
+                    </div>
+                </a>
+                <a href="#fish-curry" class="related-card">
+                    <img src="/private/nonveg-fish-fry.jpg" alt="Fish Curry">
+                    <div class="related-content">
+                        <h4>Fish Curry</h4>
+                        <p>35 mins • 4 servings</p>
+                    </div>
+                </a>
+                <a href="veg.html" class="related-card">
+                    <img src="/private/index-V-1c.jpg" alt="Vegetarian">
+                    <div class="related-content">
+                        <h4>Vegetarian Options</h4>
+                        <p>Explore plant-based dishes</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Colorful Zaaika</h4>
+                    <p>Bringing you the finest non-vegetarian recipes with authentic flavors and traditional cooking methods.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="veg.html">Vegetarian</a></li>
+                        <li><a href="sweets.html">Sweets</a></li>
+                        <li><a href="watercolor.html">Art Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h5>Meat Varieties</h5>
+                    <ul>
+                        <li><a href="#chicken">Chicken Recipes</a></li>
+                        <li><a href="#mutton">Mutton Specials</a></li>
+                        <li><a href="#fish">Fish Curry</a></li>
+                        <li><a href="#seafood">Seafood</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h5>Contact Info</h5>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> colorfulzaaika@gmail.com</p>
+                        <p><i class="fas fa-phone"></i> +91 8840 248XXX</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-credits">
+                    <p>Owned by <span class="gradient-text">Rani Amritanshu</span></p>
+                    <p>Managed by <span class="gradient-text">Jai Kartikey</span></p>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; 2024 Colorful Zaaika. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="zaaika.js"></script>
+</body>
+</html>

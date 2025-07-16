@@ -1,0 +1,392 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Delicacies - Colorful Zaaika</title>
+    <link rel="stylesheet" href="zaaika.css">
+    <link rel="icon" href="/private/b_icon-512x512.png" type="image/x-icon"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div id="cursor"></div>
+    <div id="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="/private/index-cz-transparent.png" alt="Colorful Zaaika Logo" class="logo">
+                <!-- <span class="logo-text">Zaaika</span> -->
+            </a>
+            
+            <div class="nav-search">
+                <input type="text" placeholder="Search sweets..." class="search-input" id="searchInput">
+                <i class="fas fa-search search-icon"></i>
+                <div class="search-results" id="searchResults"></div>
+            </div>
+            
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="veg.html" class="nav-link">Vegetarian</a>
+                <a href="#recipes" class="nav-link">Recipes</a>
+                <a href="nonveg.html" class="nav-link">Non-Veg</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <a href="index.html#collections">Collections</a>
+                <span>/</span>
+                <span>Sweets</span>
+            </div>
+            <h1 class="page-title">
+                <span class="gradient-text">Sweet</span>
+                <span>Delicacies</span>
+            </h1>
+            <p class="page-description">
+                "Life is sweet, and so are our traditional recipes that bring joy to every celebration and moment!"
+            </p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">12+</span>
+                    <span class="stat-label">Recipes</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">4.9</span>
+                    <span class="stat-label">Rating</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">800+</span>
+                    <span class="stat-label">Made This</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="/private/index-S-1c.jpg" alt="Sweet Delicacies">
+        </div>
+    </section>
+
+    <!-- Recipe Slider Section -->
+    <section class="recipes-section" id="recipes">
+        <div class="container">
+            <h2 class="section-title">Featured <span class="gradient-text">Sweets</span></h2>
+            
+            <div class="recipe-slider">
+                <div class="slider-container">
+                    <div class="slide active" data-recipe="gur-thekua">
+                        <div class="recipe-card" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('/private/sweets-thekuaa.jpg');">
+                            <div class="recipe-content">
+                                <div class="recipe-badge">Traditional</div>
+                                <h3 class="recipe-name">Gur ka Thekua</h3>
+                                <p class="recipe-description">Crispy traditional sweet made with jaggery and wheat flour</p>
+                                <div class="recipe-meta">
+                                    <span><i class="fas fa-clock"></i> 45 mins</span>
+                                    <span><i class="fas fa-users"></i> 6 servings</span>
+                                    <span><i class="fas fa-fire"></i> Medium</span>
+                                </div>
+                                <div class="recipe-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>4.9</span>
+                                </div>
+                                <button class="recipe-btn" onclick="scrollToRecipe('gur-thekua')">View Recipe</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="slide" data-recipe="rasgulla">
+                        <div class="recipe-card" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('/private/sweets-rasgulla.jpg');">
+                            <div class="recipe-content">
+                                <div class="recipe-badge">Popular</div>
+                                <h3 class="recipe-name">Rasgulla</h3>
+                                <p class="recipe-description">Soft and spongy cottage cheese balls in sugar syrup</p>
+                                <div class="recipe-meta">
+                                    <span><i class="fas fa-clock"></i> 60 mins</span>
+                                    <span><i class="fas fa-users"></i> 8 servings</span>
+                                    <span><i class="fas fa-fire"></i> Medium</span>
+                                </div>
+                                <div class="recipe-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span>4.7</span>
+                                </div>
+                                <button class="recipe-btn" onclick="scrollToRecipe('rasgulla')">View Recipe</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="slide" data-recipe="gulab-jamun">
+                        <div class="recipe-card" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('/private/sweets-gulabjamun.jpg');">
+                            <div class="recipe-content">
+                                <div class="recipe-badge">Classic</div>
+                                <h3 class="recipe-name">Gulab Jamun</h3>
+                                <p class="recipe-description">Golden brown milk solids balls soaked in fragrant syrup</p>
+                                <div class="recipe-meta">
+                                    <span><i class="fas fa-clock"></i> 50 mins</span>
+                                    <span><i class="fas fa-users"></i> 6 servings</span>
+                                    <span><i class="fas fa-fire"></i> Medium</span>
+                                </div>
+                                <div class="recipe-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>4.8</span>
+                                </div>
+                                <button class="recipe-btn" onclick="scrollToRecipe('gulab-jamun')">View Recipe</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slider-controls">
+                    <button class="slider-btn prev-btn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="slider-btn next-btn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                
+                <div class="slider-indicators">
+                    <span class="indicator active" data-slide="0"></span>
+                    <span class="indicator" data-slide="1"></span>
+                    <span class="indicator" data-slide="2"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recipe Details Section -->
+    <section class="recipe-details">
+        <div class="container">
+            <div class="recipe-detail-card" id="gur-thekua">
+                <div class="recipe-detail-content">
+                    <div class="recipe-image">
+                        <img src="/private/sweets-thekuaa.jpg" alt="Gur ka Thekua">
+                        <div class="image-info">
+                            <div class="nutrition-badge">
+                                <i class="fas fa-heart"></i>
+                                <span>Traditional</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recipe-text">
+                        <div class="recipe-header">
+                            <h2 class="recipe-title">Gur ka Thekua</h2>
+                            <div class="recipe-actions">
+                                <button class="action-btn"><i class="fas fa-bookmark"></i> Save</button>
+                                <button class="action-btn"><i class="fas fa-share"></i> Share</button>
+                                <button class="action-btn"><i class="fas fa-print"></i> Print</button>
+                            </div>
+                        </div>
+                        
+                        <div class="recipe-overview">
+                            <div class="overview-item">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <span class="label">Prep Time</span>
+                                    <span class="value">20 mins</span>
+                                </div>
+                            </div>
+                            <div class="overview-item">
+                                <i class="fas fa-fire"></i>
+                                <div>
+                                    <span class="label">Cook Time</span>
+                                    <span class="value">25 mins</span>
+                                </div>
+                            </div>
+                            <div class="overview-item">
+                                <i class="fas fa-users"></i>
+                                <div>
+                                    <span class="label">Servings</span>
+                                    <span class="value">6 people</span>
+                                </div>
+                            </div>
+                            <div class="overview-item">
+                                <i class="fas fa-signal"></i>
+                                <div>
+                                    <span class="label">Difficulty</span>
+                                    <span class="value">Medium</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <p class="recipe-intro">
+                            Gur ka Thekua is a traditional Indian sweet, especially popular during Chhath Puja. Made with jaggery, wheat flour, and aromatic spices, these crispy delights are deep-fried to golden perfection. The combination of jaggery's natural sweetness and warm spices creates an irresistible treat.
+                        </p>
+                        
+                        <div class="ingredients-section">
+                            <h3>Ingredients</h3>
+                            
+                            <div class="ingredient-group">
+                                <h4>For the Dough</h4>
+                                <ul class="ingredients-list">
+                                    <li><input type="checkbox"> 2 cups Whole wheat flour</li>
+                                    <li><input type="checkbox"> 1 cup Jaggery (gur), grated</li>
+                                    <li><input type="checkbox"> 1/4 cup Ghee</li>
+                                    <li><input type="checkbox"> 1/2 cup Milk</li>
+                                    <li><input type="checkbox"> 1 tsp Fennel seeds, crushed</li>
+                                    <li><input type="checkbox"> 1/2 tsp Cardamom powder</li>
+                                    <li><input type="checkbox"> 1/4 tsp Black pepper powder</li>
+                                    <li><input type="checkbox"> Pinch of salt</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="ingredient-group">
+                                <h4>For Frying</h4>
+                                <ul class="ingredients-list">
+                                    <li><input type="checkbox"> Oil for deep frying</li>
+                                </ul>
+                            </div>
+
+                            <div class="ingredient-group">
+                                <h4>Optional Garnish</h4>
+                                <ul class="ingredients-list">
+                                    <li><input type="checkbox"> Sesame seeds</li>
+                                    <li><input type="checkbox"> Chopped almonds</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="instructions-section">
+                            <h3>Instructions</h3>
+                            <ol class="instructions-list">
+                                <li>Heat ghee in a small pan and melt the grated jaggery with a little milk until it forms a thick syrup.</li>
+                                <li>In a large bowl, mix wheat flour, fennel seeds, cardamom powder, black pepper, and salt.</li>
+                                <li>Add the warm jaggery syrup to the flour mixture and mix well.</li>
+                                <li>Gradually add milk to form a stiff dough. The dough should not be too soft.</li>
+                                <li>Cover the dough and let it rest for 15-20 minutes.</li>
+                                <li>Roll the dough into small portions and shape them into round or oval discs about 1/4 inch thick.</li>
+                                <li>Using a fork or knife, create decorative patterns on the surface.</li>
+                                <li>Heat oil in a deep pan for frying on medium heat.</li>
+                                <li>Carefully slide the thekuas into the hot oil and fry until golden brown and crispy.</li>
+                                <li>Remove and drain on paper towels.</li>
+                                <li>Let them cool completely. Store in an airtight container.</li>
+                            </ol>
+                        </div>
+
+                        <div class="recipe-tips">
+                            <h3>Chef's Tips</h3>
+                            <ul class="tips-list">
+                                <li>Ensure jaggery is completely dissolved to avoid lumps</li>
+                                <li>The dough should be stiff for crispy thekuas</li>
+                                <li>Fry on medium heat for even cooking</li>
+                                <li>Store in airtight containers for up to 2 weeks</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Recipes -->
+    <section class="related-recipes">
+        <div class="container">
+            <h2 class="section-title">More <span class="gradient-text">Sweet</span> Recipes</h2>
+            <div class="related-grid">
+                <a href="#rasgulla" class="related-card">
+                    <img src="/private/sweets-rasgulla.jpg" alt="Rasgulla">
+                    <div class="related-content">
+                        <h4>Rasgulla</h4>
+                        <p>60 mins • 8 servings</p>
+                    </div>
+                </a>
+                <a href="#gulab-jamun" class="related-card">
+                    <img src="/private/sweets-gulabjamun.jpg" alt="Gulab Jamun">
+                    <div class="related-content">
+                        <h4>Gulab Jamun</h4>
+                        <p>50 mins • 6 servings</p>
+                    </div>
+                </a>
+                <a href="veg.html" class="related-card">
+                    <img src="/private/index-V-1c.jpg" alt="Vegetarian">
+                    <div class="related-content">
+                        <h4>Vegetarian Recipes</h4>
+                        <p>Explore savory dishes</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Colorful Zaaika</h4>
+                    <p>Sweetening lives with traditional recipes and authentic flavors from the heart of India.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="veg.html">Vegetarian</a></li>
+                        <li><a href="nonveg.html">Non-Veg</a></li>
+                        <li><a href="watercolor.html">Art Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h5>Sweet Categories</h5>
+                    <ul>
+                        <li><a href="#festival">Festival Sweets</a></li>
+                        <li><a href="#milk-based">Milk Based</a></li>
+                        <li><a href="#fried">Fried Sweets</a></li>
+                        <li><a href="#regional">Regional Specials</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h5>Contact Info</h5>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> colorfulzaaika@gmail.com</p>
+                        <p><i class="fas fa-phone"></i> +91 8840 248XXX</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-credits">
+                    <p>Owned by <span class="gradient-text">Rani Amritanshu</span></p>
+                    <p>Managed by <span class="gradient-text">Jai Kartikey</span></p>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; 2024 Colorful Zaaika. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="zaaika.js"></script>
+</body>
+</html>

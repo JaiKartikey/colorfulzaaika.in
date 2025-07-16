@@ -1,0 +1,373 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watercolor Gallery - Colorful Zaaika</title>
+    <link rel="stylesheet" href="zaaika.css">
+    <link rel="icon" href="/private/b_icon-512x512.png" type="image/x-icon"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div id="cursor"></div>
+    <div id="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="/private/index-cz-transparent.png" alt="Colorful Zaaika Logo" class="logo">
+                <!-- <span class="logo-text">Zaaika</span> -->
+            </a>
+            
+            <div class="nav-search">
+                <input type="text" placeholder="Search artworks..." class="search-input" id="searchInput">
+                <i class="fas fa-search search-icon"></i>
+                <div class="search-results" id="searchResults"></div>
+            </div>
+            
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="veg.html" class="nav-link">Recipes</a>
+                <a href="pencil.html" class="nav-link">Pencil Art</a>
+                <a href="#gallery" class="nav-link">Gallery</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <a href="index.html#collections">ChitraKala</a>
+                <span>/</span>
+                <span>Watercolor</span>
+            </div>
+            <h1 class="page-title">
+                <span class="gradient-text">Watercolor</span>
+                <span>Gallery</span>
+            </h1>
+            <p class="page-description">
+                "Fluid beauty in every brushstroke - where colors dance and emotions flow through the magic of watercolor artistry!"
+            </p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">20+</span>
+                    <span class="stat-label">Artworks</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">5</span>
+                    <span class="stat-label">Years</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">2K+</span>
+                    <span class="stat-label">Views</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="/private/index-painting-crop.jpg" alt="Watercolor Art">
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section" id="gallery">
+        <div class="container">
+            <h2 class="section-title">Watercolor <span class="gradient-text">Collection</span></h2>
+            
+            <!-- Gallery Filter -->
+            <div class="gallery-filter">
+                <button class="filter-btn active" data-filter="all">All Artworks</button>
+                <button class="filter-btn" data-filter="landscape">Landscapes</button>
+                <button class="filter-btn" data-filter="portrait">Portraits</button>
+                <button class="filter-btn" data-filter="nature">Nature</button>
+                <button class="filter-btn" data-filter="abstract">Abstract</button>
+            </div>
+            
+            <!-- Gallery Grid -->
+            <div class="gallery-grid">
+                <div class="gallery-item" data-category="landscape">
+                    <div class="artwork-card">
+                        <img src="/private/water-eagle.jpg" alt="Landscape Painting" class="artwork-image">
+                        <div class="artwork-overlay">
+                            <div class="artwork-info">
+                                <h3 class="artwork-title">Serene Landscape</h3>
+                                <p class="artwork-desc">A peaceful countryside view</p>
+                                <div class="artwork-details">
+                                    <span><i class="fas fa-calendar"></i> 2024</span>
+                                    <span><i class="fas fa-palette"></i> Watercolor</span>
+                                    <span><i class="fas fa-expand-arrows-alt"></i> 24" x 18"</span>
+                                </div>
+                            </div>
+                            <div class="artwork-actions">
+                                <button class="action-btn" onclick="viewArtwork('paint3.jpg', 'Serene Landscape')">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="action-btn">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                                <button class="action-btn">
+                                    <i class="fas fa-share"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="nature">
+                    <div class="artwork-card">
+                        <img src="/private/water-scenery.jpg" alt="Nature Study" class="artwork-image">
+                        <div class="artwork-overlay">
+                            <div class="artwork-info">
+                                <h3 class="artwork-title">Nature's Symphony</h3>
+                                <p class="artwork-desc">Vibrant floral composition</p>
+                                <div class="artwork-details">
+                                    <span><i class="fas fa-calendar"></i> 2024</span>
+                                    <span><i class="fas fa-palette"></i> Watercolor</span>
+                                    <span><i class="fas fa-expand-arrows-alt"></i> 16" x 20"</span>
+                                </div>
+                            </div>
+                            <div class="artwork-actions">
+                                <button class="action-btn" onclick="viewArtwork('watercolor-1c.jpeg', 'Nature\'s Symphony')">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="action-btn">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                                <button class="action-btn">
+                                    <i class="fas fa-share"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="abstract">
+                    <div class="artwork-card">
+                        <img src="/private/water-love.jpg" alt="Abstract Watercolor" class="artwork-image">
+                        <div class="artwork-overlay">
+                            <div class="artwork-info">
+                                <h3 class="artwork-title">Color Flow</h3>
+                                <p class="artwork-desc">Abstract color exploration</p>
+                                <div class="artwork-details">
+                                    <span><i class="fas fa-calendar"></i> 2023</span>
+                                    <span><i class="fas fa-palette"></i> Watercolor</span>
+                                    <span><i class="fas fa-expand-arrows-alt"></i> 12" x 16"</span>
+                                </div>
+                            </div>
+                            <div class="artwork-actions">
+                                <button class="action-btn" onclick="viewArtwork('abstract-watercolor.jpg', 'Color Flow')">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="action-btn">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                                <button class="action-btn">
+                                    <i class="fas fa-share"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="landscape">
+                    <div class="artwork-card">
+                        <img src="/private/water-landscape.jpg" alt="Mountain Scene" class="artwork-image">
+                        <div class="artwork-overlay">
+                            <div class="artwork-info">
+                                <h3 class="artwork-title">Mountain Mist</h3>
+                                <p class="artwork-desc">Misty mountain morning</p>
+                                <div class="artwork-details">
+                                    <span><i class="fas fa-calendar"></i> 2024</span>
+                                    <span><i class="fas fa-palette"></i> Watercolor</span>
+                                    <span><i class="fas fa-expand-arrows-alt"></i> 20" x 24"</span>
+                                </div>
+                            </div>
+                            <div class="artwork-actions">
+                                <button class="action-btn" onclick="viewArtwork('mountain-watercolor.jpg', 'Mountain Mist')">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="action-btn">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                                <button class="action-btn">
+                                    <i class="fas fa-share"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="nature">
+                    <div class="artwork-card">
+                        <img src="/private/no-img.jpg" alt="Floral Study" class="artwork-image">
+                        <div class="artwork-overlay">
+                            <div class="artwork-info">
+                                <h3 class="artwork-title">Blooming Dreams</h3>
+                                <p class="artwork-desc">Delicate floral study</p>
+                                <div class="artwork-details">
+                                    <span><i class="fas fa-calendar"></i> 2023</span>
+                                    <span><i class="fas fa-palette"></i> Watercolor</span>
+                                    <span><i class="fas fa-expand-arrows-alt"></i> 14" x 18"</span>
+                                </div>
+                            </div>
+                            <div class="artwork-actions">
+                                <button class="action-btn" onclick="viewArtwork('floral-watercolor.jpg', 'Blooming Dreams')">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="action-btn">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                                <button class="action-btn">
+                                    <i class="fas fa-share"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="portrait">
+                    <div class="artwork-card">
+                        <img src="/private/no-img.jpg" alt="Portrait Study" class="artwork-image">
+                        <div class="artwork-overlay">
+                            <div class="artwork-info">
+                                <h3 class="artwork-title">Gentle Soul</h3>
+                                <p class="artwork-desc">Expressive portrait study</p>
+                                <div class="artwork-details">
+                                    <span><i class="fas fa-calendar"></i> 2024</span>
+                                    <span><i class="fas fa-palette"></i> Watercolor</span>
+                                    <span><i class="fas fa-expand-arrows-alt"></i> 16" x 20"</span>
+                                </div>
+                            </div>
+                            <div class="artwork-actions">
+                                <button class="action-btn" onclick="viewArtwork('portrait-watercolor.jpg', 'Gentle Soul')">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="action-btn">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                                <button class="action-btn">
+                                    <i class="fas fa-share"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-content">
+            <span class="lightbox-close">&times;</span>
+            <img id="lightbox-image" class="lightbox-img" alt="">
+            <div class="lightbox-info">
+                <h3 id="lightbox-title"></h3>
+                <div class="lightbox-actions">
+                    <button class="lightbox-btn"><i class="fas fa-download"></i> Download</button>
+                    <button class="lightbox-btn"><i class="fas fa-share"></i> Share</button>
+                    <button class="lightbox-btn"><i class="fas fa-heart"></i> Like</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Artist Section -->
+    <section class="artist-section">
+        <div class="container">
+            <div class="artist-content">
+                <div class="artist-image">
+                    <img src="/private/watercolor-artist.jpg" alt="Artist">
+                </div>
+                <div class="artist-text">
+                    <h2 class="artist-title">About the <span class="gradient-text">Artist</span></h2>
+                    <p class="artist-description">
+                        With over 5 years of experience in watercolor painting, I find inspiration in nature's beauty and life's simple moments. Each brushstroke tells a story, and every color blend captures an emotion. My work focuses on the fluidity and transparency that makes watercolor such a magical medium.
+                    </p>
+                    <div class="artist-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Paintings</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">3</span>
+                            <span class="stat-label">Exhibitions</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">100+</span>
+                            <span class="stat-label">Happy Collectors</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Colorful Zaaika</h4>
+                    <p>Exploring the beauty of watercolor artistry through vibrant expressions and creative interpretations of the world around us.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-behance"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="veg.html">Recipes</a></li>
+                        <li><a href="pencil.html">Pencil Art</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h5>Art Categories</h5>
+                    <ul>
+                        <li><a href="#landscape">Landscapes</a></li>
+                        <li><a href="#portrait">Portraits</a></li>
+                        <li><a href="#nature">Nature Studies</a></li>
+                        <li><a href="#abstract">Abstract</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h5>Contact Info</h5>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> colorfulzaaika@gmail.com</p>
+                        <p><i class="fas fa-phone"></i> +91 8840 248XXX</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-credits">
+                    <p>Owned by <span class="gradient-text">Rani Amritanshu</span></p>
+                    <p>Managed by <span class="gradient-text">Jai Kartikey</span></p>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; 2024 Colorful Zaaika. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="watercolor.js"></script>
+</body>
+</html>
