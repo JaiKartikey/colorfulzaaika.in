@@ -52,41 +52,6 @@ function initializeAll() {
 }
 
 // Custom Cursor
-function initializeCursor() {
-    if (window.innerWidth > 768) {
-        document.addEventListener('mousemove', (e) => {
-            const { clientX: x, clientY: y } = e;
-            
-            if (cursor && cursorFollower) {
-                cursor.style.left = x + 'px';
-                cursor.style.top = y + 'px';
-                
-                setTimeout(() => {
-                    cursorFollower.style.left = x + 'px';
-                    cursorFollower.style.top = y + 'px';
-                }, 50);
-            }
-        });
-
-        // Cursor interactions
-        const interactiveElements = document.querySelectorAll('a, button, .recipe-card, .btn, .indicator');
-        interactiveElements.forEach(el => {
-            el.addEventListener('mouseenter', () => {
-                if (cursor && cursorFollower) {
-                    cursor.style.transform = 'scale(1.5)';
-                    cursorFollower.style.transform = 'scale(1.5)';
-                }
-            });
-            
-            el.addEventListener('mouseleave', () => {
-                if (cursor && cursorFollower) {
-                    cursor.style.transform = 'scale(1)';
-                    cursorFollower.style.transform = 'scale(1)';
-                }
-            });
-        });
-    }
-}
 
 // Navbar functionality
 function initializeNavbar() {
