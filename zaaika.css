@@ -275,6 +275,7 @@ body {
 /* Page Hero */
 .page-hero {
     /* min-height: 40vh; */
+    margin-top: 20px;
 
     display: flex;
     align-items: center;
