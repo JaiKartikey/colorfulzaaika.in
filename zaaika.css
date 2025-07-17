@@ -297,7 +297,7 @@ body {
 }
 .hero-image {
     position: relative;
-    
+
     /* right: 0; */
     /* top: 50%;   */
     /* transform: translateY(-50%); */
@@ -317,6 +317,7 @@ body {
     left: 50%;  */
     object-fit: cover;
     border-radius: var(--radius-2xl);
+    opacity: 0.15;
 }
 
 .hero-content {
