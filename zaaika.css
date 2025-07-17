@@ -600,6 +600,7 @@ body {
 
 /* Recipe Details */
 .recipe-details {
+    margin-top: 20px;
     padding: var(--space-16) 0;
     background: var(--primary-dark);
 }
