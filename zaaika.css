@@ -275,7 +275,7 @@ body {
 /* Page Hero */
 .page-hero {
     min-height: 60vh; 
-    display: flex;
+    display: grid;
     align-items: center;
     position: relative;
     padding: var(--space-20) 0 var(--space-12);
@@ -374,9 +374,9 @@ body {
 
 .hero-image {
     position: absolute;
-    right: 0;
-    top: 50%;  
-    transform: translateY(-50%);
+    /* right: 0; */
+    /* top: 50%;   */
+    /* transform: translateY(-50%); */
     width: 35%;
     height: 70%;
     z-index: 1;
