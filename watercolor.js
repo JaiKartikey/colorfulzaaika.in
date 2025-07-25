@@ -293,12 +293,12 @@ function initializeScrollEffects() {
         }
         
         // Parallax for gallery items
-        const galleryItemElements = document.querySelectorAll('.gallery-item');
-        galleryItemElements.forEach((item, index) => {
-            const speed = 0.1 + (index % 3) * 0.05;
-            const yPos = scrolled * speed * -0.5;
-            item.style.transform = `translateY(${yPos}px)`;
-        });
+        // const galleryItemElements = document.querySelectorAll('.gallery-item');
+        // galleryItemElements.forEach((item, index) => {
+        //     const speed = 0.1 + (index % 3) * 0.05;
+        //     const yPos = scrolled * speed * -0.5;
+        //     item.style.transform = `translateY(${yPos}px)`;
+        // });
     });
 }
 

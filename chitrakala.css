@@ -319,6 +319,8 @@ body {
     box-shadow: var(--shadow-md);
     transition: var(--transition-normal);
     cursor: pointer;
+    position: sticky;
+    top: 0;
 }
 
 .artwork-card:hover {
